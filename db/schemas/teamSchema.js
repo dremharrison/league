@@ -8,4 +8,4 @@ const teamSchema = new Schema({
   division: Number
 })
 
-module.exports = commentSchema
+module.exports = teamSchema

@@ -8,7 +8,7 @@ const leagueSchema = new Schema({
   },
   location: String,
   sport: String,
-  adult: Boolean,
+  adult: String,
   numOfDivisions: Number,
   teams: [ teamSchema ]
 })

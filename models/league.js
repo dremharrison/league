@@ -1,4 +1,3 @@
-
 const mongoose = require('mongoose')
 const leagueSchema = require('../db/schemas/leagueSchema')
 

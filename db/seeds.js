@@ -1,3 +1,4 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
 const League = require('../models/League')
 const Team = require('../models/Team')
@@ -39,7 +40,7 @@ League.remove().then(() => {
       teams: [ team1, team2 ]
     })
     const league2 = new League({
-      title: 'MLS',
+      name: 'MLS',
       location: 'USA',
       sport: 'Soccer',
       adult: 'true',
@@ -47,7 +48,7 @@ League.remove().then(() => {
       teams: [ team1, team2 ]
     })
     const league3 = new League({
-      title: 'La Liga',
+      name: 'La Liga',
       sport: 'Soccer',
       location: 'Spain',
       adult: 'true',
@@ -55,7 +56,7 @@ League.remove().then(() => {
       teams: [ team1, team2 ]
     })
     const league4 = new League({
-      title: 'Bundesliga',
+      name: 'Bundesliga',
       sport: 'Soccer',
       location: 'Germany',
       adult: 'false',
