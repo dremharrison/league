@@ -22,7 +22,9 @@ router.get('/new', (req, res) => {
 
 // CREATE Route
 router.post('/', (req, res) => {
-  const newLeague = req.body
+  console.log('inside post route')
+  const createLeague = req.body
+  console.log(createLeague)
   League.create(createLeague)
     .then(() => {
       res.redirect('/league')
