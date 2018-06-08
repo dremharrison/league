@@ -2,15 +2,13 @@ const express = require('express')
 const router = express.Router()
 const League = require('../models/league')
 
-/* GET homework listing. */
-// localhost/homework
+
 router.get('/', (req, res, next) => {
 
-  // Find all Homeworks
+  // Find all Leagues
   League.find().then((listOfLeagues) => {
       console.log(listOfLeagues)
-      // Once you have all homework, then render out index page homeworks is all
-      // pieces of data that match the Homework Model
+   
       res.render('league/index', { listOfLeagues: listOfLeagues })
     })
     .catch((err) => res.send(err))
@@ -58,7 +56,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
   League.findByIdAndRemove(req.params.id)
     .then(() => {
-      console.log('Successfully Delete ')
+      console.log('Delete ')
       res.redirect('/league')
     })
 })

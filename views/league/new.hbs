@@ -1,28 +1,33 @@
 <h1>Create New League</h1>
 
 <form action="/league" method="POST">
+
   <div>
     <label for="title">League Name</label>
-    <input type="text" name="title" placeholder="Homework Title" />
+    <input type="text" name="leaguename"/>
   </div>
+
   <div>
-    <label for="description">Homework Description</label>
-    <textarea 
-    type="text" 
-    name="description" 
-    placeholder="Homework Description"></textarea>
+    <label for="description">Location</label>
+    <input type="text" name="leaguelocation"/>
   </div>
+
   <div>
-    <label for="subject">Homework subject</label>
-    <input type="text" name="subject" placeholder="Homework subject" />
+    <label for="subject">Sport</label>
+    <input type="text" name="leaguesport"/>
   </div>
+
   <div>
-    <label for="createdBy">Homework createdBy</label>
-    <input type="text" name="createdBy" placeholder="Homework createdBy" />
+    <label for="createdBy">Adult League?</label>
+    <input type="text" name="leagueadult"/>
   </div>
+
   <div>
-    <label for="dueDate">Homework dueDate</label>
-    <input type="date" name="dueDate" />
+    <label for="dueDate">Number of Divisions</label>
+    <input type="text" name="leaguenumofdivisions" />
   </div>
-  <button type="submit">Save Homework</button>
+
+  <button type="reset"> Reset</button>
+  <button type="submit">Save New League</button>
+  
 </form>

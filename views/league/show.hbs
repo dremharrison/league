@@ -1,0 +1,9 @@
+<h1>{{showLeague.name}}</h1>
+<h3>Location: {{showLeague.location}}</h3>
+<p>Sport: {{showLeague.sport}}</p>
+<p>Adult ?: {{showLeague.adult}}</p>
+<p>Number of Divisions: {{showLeague.numOfDivisions}}</p>
+
+<form action="/league/{{showLeague._id}}?_method=DELETE" method="POST">
+  <button type="submit">Delete League</button>
+</form>

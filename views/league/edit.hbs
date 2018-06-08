@@ -1,31 +1,30 @@
 <h1>Edit {{showLeague.title}}</h1>
 
-<form action="/homework/{{showLeague._id}}?_method=PUT" method="POST">
+<form action="/league/{{showLeague._id}}?_method=PUT" method="POST">
   <div>
     <label for="title">League Name</label>
-    <input type="text" name="title" value={{showLeague.name}} />
+    <input type="text" name="leaguename"/>
   </div>
+
   <div>
     <label for="description">Location</label>
-    <textarea 
-    type="text" 
-    name="description" >{{showLeague.location}}</textarea>
+    <input type="text" name="leaguelocation"/>
   </div>
+
   <div>
-    <label for="subject">Homework subject</label>
-    <input type="text" name="subject" value={{showLeague.sport}} />
+    <label for="subject">Sport</label>
+    <input type="text" name="leaguesport"/>
   </div>
+
   <div>
-    <label for="createdBy">Homework createdBy</label>
-    <input type="text" name="createdBy" value={{showLeague.adult}} />
+    <label for="createdBy">Adult League?</label>
+    <input type="text" name="leagueadult"/>
   </div>
+
   <div>
-    <label for="dueDate">Homework dueDate</label>
-    <input type="date" name="dueDate" value={{showLeague.numOfDivisions}} />
+    <label for="dueDate">Number of Divisions</label>
+    <input type="text" name="leaguenumofdivisions" />
   </div>
-  <div>
-    <label for="dueDate">Homework dueDate</label>
-    <input type="date" name="dueDate" value={{showLeague.teams}} />
-  </div>
+
   <button type="submit">Update</button>
 </form>
