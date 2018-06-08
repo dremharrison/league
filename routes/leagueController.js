@@ -8,7 +8,7 @@ router.get('/', (req, res, next) => {
 
   // Find all Homeworks
   League.find().then((listOfLeagues) => {
-
+      console.log(listOfLeagues)
       // Once you have all homework, then render out index page homeworks is all
       // pieces of data that match the Homework Model
       res.render('league/index', { listOfLeagues: listOfLeagues })
