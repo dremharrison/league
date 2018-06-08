@@ -1,18 +1,14 @@
 <h1>All Leagues</h1>
 
-<p>Is this working?</p>
-
 <ul>
   {{#each listOfLeagues}}
   <li>
-    <a href="/league/{{_id}}">
-      <p>{{name}}</p>
+    <a href="/league/{{_id}}"><p>{{name}}</p></a>
       <p>{{location}}</p>
       <p>{{sport}}</p>
       <p>{{adult}}</p>
       <p>{{numOfDivisions}}</p>
       <p>{{teams}}</p>
-    </a>
   </li>
   {{/each}}
 </ul>
