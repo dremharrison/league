@@ -4,6 +4,10 @@
 <p>Adult ?: {{showLeague.adult}}</p>
 <p>Number of Divisions: {{showLeague.numOfDivisions}}</p>
 
+<form action="/league/{{showLeague._id}}/edit?_method=DELETE" method="PUT">
+  <button type="submit">Edit League</button>
+</form>
+
 <form action="/league/{{showLeague._id}}?_method=DELETE" method="POST">
   <button type="submit">Delete League</button>
 </form>

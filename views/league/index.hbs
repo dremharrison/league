@@ -1,13 +1,20 @@
-<h1>All Leagues</h1>
+<h1>Leagues</h1>
 
-<ul>
+<div class="leagueindexcontainer">
+
+
   {{#each listOfLeagues}}
-  <li>
-    <a href="/league/{{_id}}"><p>{{name}}</p></a>
-      <p>{{location}}</p>
-      <p>{{sport}}</p>
-      <p>{{adult}}</p>
-      <p>{{numOfDivisions}}</p>
-  </li>
+  <div class="hvr-grow">
+    <a href="/league/{{_id}}">
+      <div class="leaguelist">
+        <p>{{name}}</p>
+        <p>{{location}}</p>
+        <p>{{sport}}</p>
+        <p>{{adult}}</p>
+        <p>{{numOfDivisions}}</p>
+      </div>
+    </a>
+  </div>
   {{/each}}
-</ul>
+
+</div>
