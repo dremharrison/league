@@ -6,7 +6,7 @@ var logger = require('morgan');
 const methodOverride = require('method-override')
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var playersRouter = require('./routes/playerController');
 var leagueRouter = require('./routes/leagueController')
 var teamRouter = require('./routes/teamController')
 
@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('views/images'));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/players', playersRouter);
 app.use('/league', leagueRouter);
 app.use('/team', teamRouter);
 

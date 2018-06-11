@@ -1,24 +1,12 @@
-// const player1 = new Player({
-//     name: 'Josef Martinez',
-//     age: 24,
-//     gender: 'M',
-//     position: 'Striker',
-//     jerseynum: 7,
-//     picurl: ''
-//   })
-
-  
-
 const Schema = require('mongoose').Schema
 const teamSchema = require('./teamSchema')
 
-const playerSchema = new Player({
-  name: 'Josef Martinez',
-  age: 24,
-  gender: 'M',
-  position: 'Striker',
-  jerseynum: 7,
-  picurl: ''
+const playerSchema = new Schema({
+  name: 'String',
+  age: Number,
+  gender: 'String',
+  position: 'String',
+  picurl: 'String'
 })
 
-module.exports = leagueSchema
+module.exports = playerSchema

@@ -1,10 +1,21 @@
 
-{{#each teams}}
-  {{ <a href="/player/{{_id}}"><p>{{name}}</p></a>
+<h1>Leagues</h1>
 
-      <p>{{name}}</p>
-      <p>{{logourl}}</p>
-      <p>{{manager}}</p>
-      <p>{{numOfPlayers}}</p>
-      <p>{{division}}</p>
-{{/each}}
+<div class="leagueindexcontainer">
+
+
+  {{#each listOfLeagues}}
+  <div class="hvr-grow">
+    <a href="/team/{{_id}}">
+      <div class="leaguelist">
+        <p>{{name}}</p>
+        <p>{{logourl}}</p>
+        <p>{{manager}}</p>
+        <p>{{numOfPlayers}}</p>
+        <p>{{divisions}}</p>
+      </div>
+    </a>
+  </div>
+  {{/each}}
+
+</div>

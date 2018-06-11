@@ -1,35 +1,34 @@
-<h1>Edit {{showLeague.title}}</h1>
-
-<h1>{{showLeague.name}}</h1>
-<h3>Location: {{showLeague.location}}</h3>
-<p>Sport: {{showLeague.sport}}</p>
-<p>Adult ?: {{showLeague.adult}}</p>
-<p>Number of Divisions: {{showLeague.numOfDivisions}}</p>
+<h1>Edit {{showLeague.name}}</h1>
 
 <form action="/league/{{showLeague._id}}?_method=PUT" method="POST">
   <div>
-    <label for="title">League Name</label>
-    <input type="text" name="name"/>
+    <label for="name">League Name</label>
+    <input type="text" value="{{showLeague.name}}" name="name"/>
   </div>
 
   <div>
-    <label for="description">Location</label>
-    <input type="text" name="location"/>
+    <label for="location">Location</label>
+    <input type="text" value="{{showLeague.location}}" name="location"/>
   </div>
 
   <div>
-    <label for="subject">Sport</label>
-    <input type="text" name="sport"/>
+    <label for="sport">Sport</label>
+    <input type="text" value="{{showLeague.sport}}" name="sport"/>
   </div>
 
   <div>
-    <label for="createdBy">Adult League?</label>
-    <input type="text" name="adult"/>
+    <label for="logourl">Logourl</label>
+    <input type="text" value="{{showLeague.logourl}}" name="logourl"/>
   </div>
 
   <div>
-    <label for="dueDate">Number of Divisions</label>
-    <input type="text" name="numOfDivisions" />
+    <label for="adult">Adult League?</label>
+    <input type="text" value="{{showLeague.adult}}" name="adult"/>
+  </div>
+
+  <div>
+    <label for="numOfDivisions">Number of Divisions</label>
+    <input type="text" value="{{showLeague.numOfDivisions}}" name="numOfDivisions" />
   </div>
 
   <button type="submit">Update</button>

@@ -5,8 +5,10 @@ const leagueSchema = new Schema({
   name: String,
   location: String,
   sport: String,
+  logourl: String,
   adult: String,
-  numOfDivisions: Number
+  numOfDivisions: Number,
+  team:[teamSchema]
 })
 
 module.exports = leagueSchema

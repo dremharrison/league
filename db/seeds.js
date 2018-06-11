@@ -54,6 +54,7 @@ League.remove().then(() => {
     name: 'Premier League',
     location: 'England',
     sport: 'Soccer',
+    logourl:"https://www.madisondodgeronline.com/wp-content/uploads/2016/09/IMG_9097.png",
     adult: 'true',
     numOfDivisions: 3,
     teams: [team1, team2]
@@ -62,6 +63,7 @@ League.remove().then(() => {
     name: 'MLS',
     location: 'USA',
     sport: 'Soccer',
+    logourl:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/MLS_logo.svg/2000px-MLS_logo.svg.png",
     adult: 'true',
     numOfDivisions: 3,
     teams: [team1, team2]
@@ -69,6 +71,7 @@ League.remove().then(() => {
   const league3 = new League({
     name: 'La Liga',
     sport: 'Soccer',
+    logourl:"http://www.allsportspk.com/wp-content/uploads/2018/04/laliga-v-1200x1200.png",
     location: 'Spain',
     adult: 'true',
     numOfDivisions: 3,
@@ -77,6 +80,7 @@ League.remove().then(() => {
   const league4 = new League({
     name: 'Bundesliga',
     sport: 'Soccer',
+    logourl:"https://vignette.wikia.nocookie.net/fifa/images/7/73/Bundesliga_Logo.png/revision/latest?cb=20180211163850",
     location: 'Germany',
     adult: 'false',
     numOfDivisions: 3,
