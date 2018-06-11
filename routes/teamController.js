@@ -3,24 +3,20 @@ const router = express.Router({ mergeParams: true })
 const League = require('../models/league')
 const Team = require('../models/team')
 
-/* GET listing. */
+
 
 router.get('/', (req, res, next) => {
-
   // use homeworkID to find Homework assignment
-  League.findById(req.params.leagueId)
+  Team.findById(req.params.teamId)
     .then((league) => {
-      // const teams = league.teams
-      res.render('team/index', {
-        // teams
+      console.log('it works')
+      res.render('team/index', 
+      {
         league,
-        team: league.team
-
+        teams: league.teams
       })
+      console.log('it def works')
     })
-
-  // take the comments and apply them to a 
-  // hbs file
 })
 
 // NEW Route
