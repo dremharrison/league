@@ -1,9 +1,11 @@
-<button type="text">Back To Leagues</button>
+<form action="/league" method="Get">
+  <button type="submit">Back to Leagues</button>
+</form>
 
 <h1>{{showLeague.name}}</h1>
-<h3>Location: {{showLeague.location}}</h3>
+<h4>Location: {{showLeague.location}}</h4>
 <p>Sport: {{showLeague.sport}}</p>
-<img src="{{showLeague.logourl}}" alt="">
+<img src="{{showLeague.logourl}}" class="league-logo" alt="">
 <p>Adult ?: {{showLeague.adult}}</p>
 <p>Number of Divisions: {{showLeague.numOfDivisions}}</p>
 

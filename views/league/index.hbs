@@ -1,8 +1,10 @@
+<form action="/league/new" method="Get">
+  <button type="submit">Create New League</button>
+</form>
+
 <h1>Leagues</h1>
 
 <div class="leagueindexcontainer">
-
-
   {{#each listOfLeagues}}
   <div class="hvr-grow">
     <a href="/league/{{_id}}">
