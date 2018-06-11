@@ -34,6 +34,10 @@ app.use('/players', playersRouter);
 app.use('/league', leagueRouter);
 app.use('/team', teamRouter);
 
+// pp.use('/menu', menuRouter);
+// app.use('/league/:leagueId/team', teamRouter);
+// app.use('/menu/:menuId/section/:sectionID/item', itemRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

@@ -75,7 +75,7 @@ League.remove().then(() => {
     location: 'Spain',
     adult: 'Yes',
     numOfDivisions: 3,
-
+    teams: [team3, team4]
   })
   const league4 = new League({
     name: 'Bundesliga',

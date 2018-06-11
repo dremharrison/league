@@ -8,6 +8,13 @@
 <img src="{{showLeague.logourl}}" class="league-logo" alt="">
 <p>Adult ?: {{showLeague.adult}}</p>
 <p>Number of Divisions: {{showLeague.numOfDivisions}}</p>
+{{#each showLeague.teams}}
+<p>{{name}}</p>
+<img  class="team-logo" src="{{logourl}}" alt="">
+<p>{{manager}}</p>
+<p>{{numOfPlayers}}</p>
+<p>{{division}}</p>
+{{/each}}
 
 <form action="/league/{{showLeague._id}}/edit?_method=DELETE" method="PUT">
   <button type="submit">Edit League</button>
