@@ -4,18 +4,20 @@
 
 <h1>Leagues</h1>
 
-<div class="leagueindexcontainer">
-  {{#each listOfLeagues}}
-  <div class="hvr-grow">
-    <a href="/league/{{_id}}">
-      <div class="leaguelist">
-        <h4>{{name}}</h4>
-        <h5>{{location}}</h5>
-        <p>{{sport}}</p>
-        <img src="{{logourl}}" alt="" class="league-logo">
-      </div>
-    </a>
-  </div>
-  {{/each}}
+<div class="parentcontainer">
+  <div class="leagueindexcontainer">
+    {{#each listOfLeagues}}
+    <div class="hvr-grow">
+      <a href="/league/{{_id}}">
+        <div class="leaguelist">
+          <h4>{{name}}</h4>
+          <h5>{{location}}</h5>
+          <p>{{sport}}</p>
+          <img src="{{logourl}}" alt="" class="league-logo">
+        </div>
+      </a>
+    </div>
+    {{/each}}
 
+  </div>
 </div>

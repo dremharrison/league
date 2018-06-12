@@ -31,13 +31,20 @@ nav{
   margin-bottom: 40px;
 }
 
+/* .parentcontainer{
+  width: 90%;
+  background: blue;
+} */
 
 .leagueindexcontainer{
- height: 100%;
+  justify-content: center;
+  /* background: red; */
+  height: 100%;
   margin: 0 auto;
- display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+  /* padding-left: 30px; */
 }
 
 .leaguelist{
