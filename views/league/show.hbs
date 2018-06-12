@@ -2,24 +2,43 @@
   <button type="submit">Back to Leagues</button>
 </form>
 
+<div class="showleague" >
 <h1>{{showLeague.name}}</h1>
 <h4>Location: {{showLeague.location}}</h4>
-<p>Sport: {{showLeague.sport}}</p>
+<h6>Sport: {{showLeague.sport}}</h6>
 <img src="{{showLeague.logourl}}" class="league-logo" alt="">
-<p>Adult ?: {{showLeague.adult}}</p>
+<p>Adult League? {{showLeague.adult}}</p>
 <p>Number of Divisions: {{showLeague.numOfDivisions}}</p>
-{{#each showLeague.teams}}
-<p>{{name}}</p>
-<img  class="team-logo" src="{{logourl}}" alt="">
-<p>{{manager}}</p>
-<p>{{numOfPlayers}}</p>
-<p>{{division}}</p>
-{{/each}}
+</div>
 
-<form action="/league/{{showLeague._id}}/edit?_method=DELETE" method="PUT">
+<div class="flexedbuttons" >
+<form class="eachbutton" action="/league/{{showLeague._id}}/edit?_method=DELETE" method="PUT">
   <button type="submit">Edit League</button>
 </form>
 
-<form action="/league/{{showLeague._id}}?_method=DELETE" method="POST">
+<form class="eachbutton" action="/league/{{showLeague._id}}?_method=DELETE" method="POST">
   <button type="submit">Delete League</button>
+</form>
+
+
+</div>
+
+<div class="leagueindexcontainer"></div>
+{{#each showLeague.teams}}
+<div class="hvr-grow">
+  <div class="leaguelist">
+    <a href="/league/{{_id}}/team">
+      <p>{{name}}</p>
+      <img class="team-logo" src="{{logourl}}" alt="">
+      <p>{{manager}}</p>
+      <p>{{numOfPlayers}}</p>
+      <p>{{division}}</p>
+  </div>
+  </a>
+</div>
+{{/each}}
+</div>
+
+<form class="eachbutton" action="/league/{{showLeague._id}}/team/new" method="Get">
+  <button type="submit">Create New Team</button>
 </form>

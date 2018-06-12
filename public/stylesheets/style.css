@@ -102,3 +102,17 @@ nav{
 .team-logo{
   width: 125px
 }
+
+.flexedbuttons{
+  display: flex;
+  justify-content: center;
+}
+
+.eachbutton{
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+.showleague{
+  text-align: center;
+}
