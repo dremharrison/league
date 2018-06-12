@@ -62,7 +62,8 @@ League.remove().then(() => {
     logourl: 'https://i2-prod.mirror.co.uk/incoming/article6478698.ece/ALTERNATES/s482b/Arsenal-logo.jpg',
     manager: 'Arsene Wegner',
     numOfPlayers: 22,
-    division: 1
+    division: 1,
+    players:[player2]
   })
 
   const team3 = new Team({
@@ -70,7 +71,8 @@ League.remove().then(() => {
     logourl: 'https://i2-prod.mirror.co.uk/incoming/article6478698.ece/ALTERNATES/s482b/Arsenal-logo.jpg',
     manager: 'Arsene Wegner',
     numOfPlayers: 22,
-    division: 1
+    division: 1,
+    players:[player3]
   })
 
   const team4 = new Team({
@@ -78,7 +80,8 @@ League.remove().then(() => {
     logourl: 'https://i2-prod.mirror.co.uk/incoming/article6478698.ece/ALTERNATES/s482b/Arsenal-logo.jpg',
     manager: 'Arsene Wegner',
     numOfPlayers: 22,
-    division: 1
+    division: 1,
+    players:[player4]
   })
 
 

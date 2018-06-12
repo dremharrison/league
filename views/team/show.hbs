@@ -1,5 +1,5 @@
 <form action="/league/{{leagueId}}" method="Get">
-  <button type="submit">Back to Leagues</button>
+  <button type="submit">Back to League</button>
 </form>
 
 <div class="showleague" >
@@ -11,27 +11,23 @@
 </div>
 
 <div class="flexedbuttons" >
-<form class="eachbutton" action="/league/{{showLeague._id}}/edit?_method=DELETE" method="PUT">
-  <button type="submit">Edit League</button>
-</form>
-
-<form class="eachbutton" action="/league/{{showLeague._id}}?_method=DELETE" method="POST">
-  <button type="submit">Delete League</button>
+<form class="eachbutton" action="/league/{{showLeague._id}}/team/{{showTeam._id}}?_method=DELETE" method="POST">
+  <button type="submit">Delete Team</button>
 </form>
 
 
 </div>
 
 <div class="leagueindexcontainer"></div>
-{{#each showLeague.players}}
+{{#each showTeam.players}}
 <div class="hvr-grow">
   <div class="leaguelist">
     <a href="/league/{{_id}}/team">
       <p>{{name}}</p>
-      <img class="team-logo" src="{{picurl}}" alt="">
       <p>{{age}}</p>
       <p>{{gender}}</p>
       <p>{{position}}</p>
+      <img class="team-logo" src="{{picurl}}" alt="">
   </div>
   </a>
 </div>

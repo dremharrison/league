@@ -54,7 +54,11 @@ router.get('/:id', (req, res) => {
 
 // DELETE Route
 router.delete('/:id', (req, res) => {
-
+  Team.findByIdAndRemove(req.params.id)
+  .then(() => {
+    console.log('Delete ')
+    res.redirect('/league/:id')
+  })
 })
 
 module.exports = router
