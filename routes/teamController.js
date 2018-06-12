@@ -42,7 +42,16 @@ router.post('/', (req, res) => {
     .then(() => {
 
     
-      res.redirect(`/league/${req.params.leagueId}/team`)
+      res.redirect(`/league/${req.params.leagueId}`)
+    })
+})
+
+// SHOW Route
+router.get('/:id', (req, res) => {
+  League.findById(req.params.leagueId)
+    .then((league) => {
+      const showTeam = league.teams.id(req.params.id)
+      res.render('team/show', { showTeam })
     })
 })
 

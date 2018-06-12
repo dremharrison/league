@@ -1,0 +1,19 @@
+<h1>Players</h1>
+
+<div class="leagueindexcontainer">
+
+  {{#each listOfPlayers}}
+  <div class="hvr-grow">
+    <a href="/team/{{_id}}">
+      <div class="leaguelist">
+        <p>{{name}}</p>
+        <p>{{age}}</p>
+        <p>{{gender}}</p>
+        <p>{{position}}</p>
+        <img src="{{picurl}}" alt="" class="league-logo">
+      </div>
+    </a>
+  </div>
+  {{/each}}
+
+</div>

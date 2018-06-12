@@ -1,14 +1,13 @@
-<form action="/league" method="Get">
+<form action="/league/{{leagueId}}" method="Get">
   <button type="submit">Back to Leagues</button>
 </form>
 
 <div class="showleague" >
-<h1>{{showLeague.name}}</h1>
-<h4>Location: {{showLeague.location}}</h4>
-<h6>Sport: {{showLeague.sport}}</h6>
-<img src="{{showLeague.logourl}}" class="league-logo" alt="">
-<p>Adult League? {{showLeague.adult}}</p>
-<p>Number of Divisions: {{showLeague.numOfDivisions}}</p>
+<h1>{{showTeam.name}}</h1>
+<img src="{{showTeam.logourl}}" class="league-logo" alt="">
+<h4>Manager: {{showTeam.manager}}</h4>
+<h5> Num of Players: {{showTeam.numOfPlayers}}</h5>
+<h6>Division: {{showTeam.division}}</h6>
 </div>
 
 <div class="flexedbuttons" >
@@ -27,7 +26,7 @@
 {{#each showLeague.teams}}
 <div class="hvr-grow">
   <div class="leaguelist">
-    <a href="/league/{{../showLeague._id}}/team/{{_id}}">
+    <a href="/league/{{_id}}/team">
       <p>{{name}}</p>
       <img class="team-logo" src="{{logourl}}" alt="">
       <p>{{manager}}</p>
@@ -39,6 +38,6 @@
 {{/each}}
 </div>
 
-<form class="eachbutton" action="/league/{{showLeague._id}}/team/new" method="Get">
-  <button type="submit">Create New Team</button>
+<form class="eachbutton" action="/league/{{showLeague._id}}/team/{{showTeam._id}}/player/new" method="Get">
+  <button type="submit">Create New Player</button>
 </form>
