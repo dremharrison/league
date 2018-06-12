@@ -54,11 +54,11 @@ router.get('/:id', (req, res) => {
 
 // DELETE Route
 router.delete('/:id', (req, res) => {
-  Team.findByIdAndRemove(req.params.id)
-  .then(() => {
-    console.log('Delete ')
-    res.redirect('/league/:id')
-  })
+  League.findById(req.params.leagueId).remove
+    .then((league) => {
+      const showTeam = league.teams.id(req.params.id)
+      res.render('team/show', { showTeam, leagueId: req.params.leagueId })
+    })
 })
 
 module.exports = router
