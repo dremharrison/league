@@ -11,7 +11,10 @@ https://evening-thicket-55641.herokuapp.com/
 https://trello.com/b/5iOd6Be8/league
 
 ## Wireframe
-![pic](wireframe.jpg)
+![pic](wireframe.jpeg)
+
+## ERD
+![pic](erd.jpeg)
 
 ## Technologies Used
 Languages - HTML5, CSS3, Javascript, jQuery
