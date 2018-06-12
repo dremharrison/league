@@ -23,21 +23,21 @@
 </div>
 
 <div class="leagueindexcontainer"></div>
-{{#each showLeague.teams}}
+{{#each showLeague.players}}
 <div class="hvr-grow">
   <div class="leaguelist">
     <a href="/league/{{_id}}/team">
       <p>{{name}}</p>
-      <img class="team-logo" src="{{logourl}}" alt="">
-      <p>{{manager}}</p>
-      <p>{{numOfPlayers}}</p>
-      <p>{{division}}</p>
+      <img class="team-logo" src="{{picurl}}" alt="">
+      <p>{{age}}</p>
+      <p>{{gender}}</p>
+      <p>{{position}}</p>
   </div>
   </a>
 </div>
 {{/each}}
 </div>
 
-<form class="eachbutton" action="/league/{{showLeague._id}}/team/{{showTeam._id}}/player/new" method="Get">
+<form class="eachbutton" action="/league/{{leagueId}}/team/{{showTeam._id}}/players/new">
   <button type="submit">Create New Player</button>
 </form>

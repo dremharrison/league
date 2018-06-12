@@ -15,12 +15,46 @@ mongoose.connect('mongodb://localhost/league')
 
 // Remove old Homework Data
 League.remove().then(() => {
+  const player1 = new Player({
+    name: 'Josef Martinez',
+    age: 24,
+    gender: 'M',
+    position: 'Striker',
+    jerseynum: 7,
+    picurl: ''
+  })
+  const player2 = new Player({
+    name: 'Pele',
+    age: 77,
+    gender: 'M',
+    position: 'Striker',
+    jerseynum: 10,
+    picurl: ''
+  })
+  const player3 = new Player({
+    name: 'Robinho',
+    age: 34,
+    gender: 'M',
+    position: 'Midfield',
+    jerseynum: 70,
+    picurl: ''
+  })
+  const player4 = new Player({
+    name: 'Ronaldhino',
+    age: 38,
+    gender: 'M',
+    position: 'Forward',
+    jerseynum: 10,
+    picurl: ''
+  })
+
   const team1 = new Team({
     name: 'Chelsea FC',
     logourl: 'http://media.chelseafconline.com/2017/09/football-2699594_1920-770x515.jpg',
     manager: 'Antonio Conte',
     numOfPlayers: 22,
-    division: 1
+    division: 1,
+    players:[player1]
   })
 
   const team2 = new Team({
@@ -87,38 +121,7 @@ League.remove().then(() => {
     teams: [team1, team2]
   })
 
-  const player1 = new Player({
-    name: 'Josef Martinez',
-    age: 24,
-    gender: 'M',
-    position: 'Striker',
-    jerseynum: 7,
-    picurl: ''
-  })
-  const player2 = new Player({
-    name: 'Pele',
-    age: 77,
-    gender: 'M',
-    position: 'Striker',
-    jerseynum: 10,
-    picurl: ''
-  })
-  const player3 = new Player({
-    name: 'Robinho',
-    age: 34,
-    gender: 'M',
-    position: 'Midfield',
-    jerseynum: 70,
-    picurl: ''
-  })
-  const player4 = new Player({
-    name: 'Ronaldhino',
-    age: 38,
-    gender: 'M',
-    position: 'Forward',
-    jerseynum: 10,
-    picurl: ''
-  })
+
 
   const leagues = [league1, league2, league3, league4]
   const teams = [team1, team2, team3, team4]
