@@ -18,9 +18,10 @@ https://trello.com/b/5iOd6Be8/league
 
 ## Technologies Used
 Languages - HTML5, CSS3, Javascript, jQuery<br/>
-Frameworks: Bootstrap<br/>
+Frameworks & Libraries:Express, Handlebars, MongoDB, Mongoose <br/>
 Project Planning & User Stories - Trello<br/>
 Visual Studio Code<br/>
+Bootstrap<br/>
 
 ## Future Version
 User will be able to sign up and sign in<br/>
