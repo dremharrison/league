@@ -17,11 +17,11 @@ https://trello.com/b/5iOd6Be8/league
 ![pic](erd.jpeg)
 
 ## Technologies Used
-Languages - HTML5, CSS3, Javascript, jQuery
-Frameworks: Bootstrap
-Project Planning & User Stories - Trello
-Visual Studio Code
+Languages - HTML5, CSS3, Javascript, jQuery<br/>
+Frameworks: Bootstrap<br/>
+Project Planning & User Stories - Trello<br/>
+Visual Studio Code<br/>
 
 ## Future Version
-User will be able to sign up and sign in
-User will be able to have options to volunteer, sign up for camps and tournaments and find a trainer.
+User will be able to sign up and sign in<br/>
+User will be able to have options to volunteer, sign up for camps and tournaments and find a trainer.<br/>
